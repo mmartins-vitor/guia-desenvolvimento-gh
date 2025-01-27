@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Diretrizes de Desenvolvimento EMAP - Diretrizes de Desenvolvimento</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Diretrizes de Desenvolvimento EMAP";
+        var mkdocs_page_input_path = "diretrizes-de-arquitetura.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Diretrizes de Desenvolvimento
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Diretrizes de Desenvolvimento EMAP</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Ciclo-de-Desenvolvimeto/">Ciclo de Desenvolvimeto</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../modelagem-de-dados/">Modelagem de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentacao-tecnica/">Documentação Técnica</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Diretrizes de Desenvolvimento</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Diretrizes de Desenvolvimento EMAP</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="guia-de-diretrizes-de-desenvolvimento-de-software-da-emap">Guia de Diretrizes de Desenvolvimento de Software da EMAP</h1>
+<p>A esteira de desenvolvimento de aplicações da GEPDI (Gerência de Pesquisa, Desenvolvimento e Inovação), segue as indicações sugeridas pelo documento, “Guia de Diretrizes Arquiteturais para Desenvolvimento de Software da EMAP”, desenvolvido pela GETIN – EMAP, que tem como objetivo definir a arquitetura básica e os conceitos fundamentais dos sistemas desenvolvidos e/ou sustentados pela GETIN – COSID.</p>
+<p>Neste capítulo teremos algumas das boas práticas e diretrizes descritas pelo Guia de Diretrizes Arquiteturais para Desenvolvimento de Software da EMAP.</p>
+<p>O documento “Guia de Diretrizes Arquiteturais para Desenvolvimento de Software da EMAP” desenvolvido pela GETIN-COSID tem como público alvo equipes de desenvolvimento da EMAP, fábrica de software terceirizada e outras áreas relacionadas.</p>
+<h1 id="processo-de-trabalho">Processo de trabalho</h1>
+<h2 id="formalizacao-e-documentacao-de-requisitos">Formalização e Documentação de requisitos</h2>
+<p>Todos os requisitos de desenvolvimentos devem ser formalmente documentados e aproados antes do início de qualquer projeto. Isso inclui assinatura física ou eletrônica dos responsáveis da área de negócio. Conforme política já estabelecida, as informações podem ser acessadas na intranet, acessando a seguinte url: https://emapmagovbr.sharepoint.com/sgsi.</p>
+<h2 id="gestao-do-codigo-fonte">Gestão do código fonte</h2>
+<p>Utilizamos o GitLab, para gerenciar todas as versões do código fonte. Para a criação de perfis de acesso ao GitLab, deve ser enviado ao service desck uma solicitação.</p>
+<h2 id="treinamento-em-seguranca">Treinamento em segurança</h2>
+<p>Treinamentos regulares serão realizados para todos os desenvolvedores sobre segurança e práticas de desenvolvimento seguro, abordando as últimas tendências e vulnerabilidades.</p>
+<h1 id="infraestrutura-de-desenvolvimento">Infraestrutura de Desenvolvimento</h1>
+<h2 id="chamados-para-demandas-de-infraestrutura">Chamados para Demandas de Infraestrutura</h2>
+<p>As áreas devem abrir chamados através do sistema de gestão de chamados da EMAP: <a href="https://centraldeservicos.emap.ma.gov.br">Service Desk</a> para qualquer demanda relacionada à infraestrutura. Exemplos:
+- Criação de usuário de rede
+- Solicitação de Acesso ao Repositório de código - GitLab </p>
+<p>A GETIN proverá a infraestrutura necessária ao desenvolvimento, assim composta:
+- Ambiente com container - DOCKER
+- Repositório GitLab 
+- Esteira de desenvolvimento DevSecOps</p>
+<h2 id="requisitos-arquiteturais-comuns">Requisitos arquiteturais comuns</h2>
+<ul>
+<li>A comunicação entre camadas de backend e front-end deverá seguir o padrão REST API.</li>
+<li>As integrações entre soluções e a obtenção de dados corporativos deverão ser feitas chamadas REST a web services.</li>
+<li>A concepção de novas soluções deverá ser agnóstica com relação à infraestrutura de produção, ou seja, não pode estar vinculada a produtos específicos de provedores nem fornecedores de soluções externas a EMAP. Além disso, deverá, preferencialmente, seguir a arquitetura definida pela GETIN. </li>
+<li>A autenticação de usuários internos deverá ser feita por meio do Portal de Acessos.</li>
+<li>O controle de permissões de acesso deverá ser feito por meio do Portal de Acessos.</li>
+<li>Padrões de codificação:<ul>
+<li>Sugestão de definições apresentadas em https://google.github.io/styleguide/</li>
+<li>Ao longo da esteira faremos verificações de padrões de código, testes automatizados, teste de segurança</li>
+<li>Não serão aceitos diferentes padrões na mesma solução, por exemplo, nomeação de variáveis ou objetos em diferentes idiomas, nem usando diferentes estilos de codificação: camel case (ex: “camelCase”), snake case (ex: “snake_case”), kebab case (ex: “kebab-case”) etc.</li>
+</ul>
+</li>
+</ul>
+<h1 id="ciclo-de-desenvolvimento-seguro">Ciclo de Desenvolvimento Seguro</h1>
+<h2 id="uso-do-portal-de-acesso-para-gestao-de-autenticacao">Uso do Portal de Acesso para Gestão de Autenticação</h2>
+<ul>
+<li>Criação de Grupos e Perfis: Todas as aplicações desenvolvidas deverão integrar o portal de acesso para autenticação, utilizando a definição de grupos e perfis para gerenciar níveis de permissão. </li>
+<li>Definição de Níveis de Permissão: Estabelecer regras claras de permissão em todas as aplicações para garantir que os acessos sejam concedidos conforme a necessidade e a função do usuário.</li>
+</ul>
+<h2 id="diretrizes-de-seguranca-conforme-politica-72">Diretrizes de Segurança Conforme Política 72</h2>
+<ul>
+<li>Proteção da Informação: Garantir a confidencialidade, integridade e disponibilidade das informações, adotando as melhores práticas de segurança sugeridas pela norma ISO/IEC 27002. </li>
+<li>Monitoramento e Prevenção: Implementar controles sistemáticos para monitoramento e prevenção de incidentes de segurança, conforme detalhado na política.</li>
+</ul>
+<h2 id="ativacao-e-monitoramento-de-trilhas-de-auditoria">Ativação e Monitoramento de Trilhas de Auditoria</h2>
+<ul>
+<li>Ativação de Trilhas de Auditoria: Todas as aplicações devem ativar trilhas de auditoria para logar atividades críticas, o que inclui acesso a dados sensíveis e alterações no sistema. </li>
+<li>Necessidade de Descrição em Documentos de Projeto: Cada projeto deve documentar a implementação e o propósito das trilhas de auditoria, explicando como estas contribuem para a segurança e a conformidade das aplicações. </li>
+</ul>
+<h2 id="praticas-conformes-com-iso-27001">Práticas Conformes com ISO 27001</h2>
+<ul>
+<li>Implementar e manter práticas de segurança que atendam aos padrões da ISO 27001, como detalhado nas políticas.</li>
+</ul>
+<h2 id="docekr">Docekr</h2>
+<ul>
+<li>Docker é utilizado para encapsular o ambiente de desenvolvimento e produção, garantindo que as aplicações sejam executadas de forma consistente em diferentes ambientes. Isso não apenas facilita o desenvolvimento e os testes, mas também melhora a segurança ao isolar as aplicações em contêineres, reduzindo as interdependências e possíveis falhas de segurança</li>
+</ul>
+<h2 id="ciclo-cdci">Ciclo CD/CI</h2>
+<ul>
+<li>O ciclo de integração contínua (CI) e entrega contínua (CD) já está em operação para os projetos. Essa prática é crucial para a estratégia DevSecOps, pois permite a automação do processo de teste, integração, e entrega de software. Isso não apenas acelera o desenvolvimento, mas também introduz verificações de segurança automatizadas, como análises estáticas e dinâmicas de código, em cada etapa do desenvolvimento</li>
+</ul>
+<h2 id="padroes-de-desenvolvimento-e-estrategia-de-branches">Padrões de Desenvolvimento e Estratégia de Branches</h2>
+<ul>
+<li>Os padrões de desenvolvimento são definidos para manter a qualidade e consistência do código. A estratégia de branches, como Git Flow ou similar, é usada para gerenciar as mudanças de código de maneira organizada, facilitando a implementação de funcionalidades, correções e lançamentos sem interferir no desenvolvimento contínuo. A estratégia de branches também ajuda a integrar medidas de segurança nas revisões de código e nos merges, garantindo que as melhorias de segurança sejam implementadas de forma eficaz.</li>
+</ul>
+<h1 id="estrategia-de-branches">Estratégia de Branches</h1>
+<p>A estratégia de branches deve ser projetada para apoiar o ciclo de vida do desenvolvimento do software, desde o desenvolvimento inicial até a produção. O uso do modelo escolhido será o Oneflow do "Gitflow" (OneFlow – a Git branching model and workflow): </p>
+<blockquote>
+<p><strong>Branch master:</strong> 
+Serve como a principal linha de base do projeto, contendo o código que está em produção.</p>
+<p><strong>Branch develop:</strong> 
+Usada como a principal branch de desenvolvimento, onde todas as features, hotfixes e releases são mescladas antes de serem promovidas para a master. </p>
+<p><strong>Branch feature:</strong> 
+Criadas a partir da develop, cada uma representando uma nova funcionalidade a ser desenvolvida</p>
+<p><strong>Branch release:</strong> 
+Preparam o próximo lançamento para produção, permitindo ajustes finais e preparação para o merge na master.</p>
+<p><strong>Branch hotfix:</strong> 
+Utilizadas para correções rápidas direto na branch master, que posteriormente são mescladas de volta na develop.</p>
+</blockquote>
+<p><img alt="OneFlow" src="../images/onwflow.png" /></p>
+<h2 id="regras-de-nomenclatura">Regras de Nomenclatura</h2>
+<ul>
+<li>Branches de Feature: feature/nome-da-feature</li>
+<li>Branches de Release: release/versão</li>
+<li>Branches de Hotfix: hotfix/versão</li>
+<li>Branches de Bugfix: bugfix/nome-do-bugflix</li>
+</ul>
+<h2 id="padrao-de-nomes-de-branches-de-feature">Padrão de Nomes de Branches de Feature</h2>
+<p>Branches de feature devem seguir uma convenção clara que descreva o conteúdo da branch: 
+- Formato: feature/descrição-curta-da-feature
+- Exemplo: feature/novo_sistema_de_login </p>
+<h2 id="padrao-de-nome-de-tags">Padrão de nome de Tags</h2>
+<p>As tags são usadas para marcar pontos específicos na história do projeto que são importantes, como lançamentos de produção ou milestones.
+- Tags de Feature: feat/nome-da-feature
+- Tag de Produção: prod/versão</p>
+<h2 id="estrategia-de-merge">Estratégia de Merge</h2>
+<p>O processo de merge deve ser gerenciado para manter a integridade do código e facilitar a integração contínua:
+- De Feature para Develop: Após a conclusão e revisão de uma feature, ela é mesclada de volta na develop através de um Merge Request (MR), garantindo que todas as integrações e testes automáticos sejam passados. 
+- De Develop para Main e Tags: Uma vez que a release está pronta para ir a produção, ela é mesclada na main, e uma tag de produção é criada para marcar a versão. 
+- De Main para Develop: Após um hotfix ser aplicado na main, ele deve ser mesclado de volta na develop para garantir que as correções sejam aplicadas ao trabalho de desenvolvimento em andamento.</p>
+<h1 id="tecnologias-suportadas">Tecnologias suportadas</h1>
+<ul>
+<li>Java com Spring Boot: Utilizado para o back-end robusto, aproveitando a estabilidade, a maturidade e a comunidade de desenvolvimento. Spring Boot facilita a configuração e o desenvolvimento de novos serviços, com grande suporte para segurança e configurações pré-definidas que aceleram o desenvolvimento e reduzem a possibilidade de erros. </li>
+<li>Python: Ideal para scripts de automação e desenvolvimento rápido de aplicações backend, especialmente pela facilidade de leitura do código e pela ampla disponibilidade de bibliotecas. </li>
+<li>React (incluindo React Native e Next.js): React JS é usado para criar interfaces de usuário dinâmicas com alto desempenho. React Native expande essas capacidades para o desenvolvimento de aplicativos móveis, enquanto Next.js oferece uma solução para aplicações server-side rendering (SSR), o que é crucial para SEO e performance inicial de carregamento. </li>
+<li>Vue com Nuxt.js: Similar ao Next.js para React, Nuxt.js é um framework para aplicações Vue.js com renderização do lado do servidor, estruturação de projetos e configurações adicionais que melhoram a performance e a experiência do usuário. </li>
+<li>Node.js: Usado no back-end, permite o desenvolvimento em JavaScript, facilitando a integração com as stacks front-end e a execução de operações assíncronas eficientes, essenciais para a construção de APIs rápidas e escaláveis.</li>
+</ul>
+<h1 id="importancia-do-uso-correto-de-bibliotecas-e-dependencias">Importância do Uso Correto de Bibliotecas e Dependências</h1>
+<p>O gerenciamento correto de bibliotecas e dependências é crucial para manter a segurança e a eficiência do ciclo de desenvolvimento. Isso afeta diretamente o pipeline de testes, pois dependências mal gerenciadas podem introduzir vulnerabilidades e bugs, além de complicar a atualização e a manutenção do código. Utilizar ferramentas como npm ou yarn para Node.js e Maven ou Gradle para Java pode ajudar a manter as dependências organizadas e seguras.</p>
+<h1 id="integracao-com-a-api-tospws">Integração com a API TOSPWS</h1>
+<p>A API TOSPWS é essencial para acessar informações operacionais críticas do sistema TOS+ no Porto do Itaqui. Para garantir a segurança e integridade dos dados, todas as interações com o sistema TOS+ devem ser realizadas exclusivamente através desta API. A autenticação é necessária para todas as operações, utilizando tokens com validade de 6 horas para assegurar acessos controlados. A utilização da API TOSPWS permite uma integração segura, consistente e eficiente, sendo crucial para a automatização e eficácia dos processos portuários.</p>
+<h1 id="esteira-de-desenvolvimento">Esteira de Desenvolvimento</h1>
+<h2 id="cdcd-e-testes">CD/CD e Testes</h2>
+<ul>
+<li>Serve como a principal linha de base do projeto, contendo o código que está em produção.</li>
+</ul>
+<p><img alt="Esteira cd/ci e teste" src="../images/esteira01.png" /></p>
+<p><img alt="Esteira cd/ci e teste" src="../images/esteira02.png" /></p>
+<h1 id="documentacao">Documentação</h1>
+<h2 id="template-e-requisitos">Template e requisitos</h2>
+<p>Recomendamos o uso de templates existentes para documentação de requisitos e issues, com seções específicas para descrição de negócios, modelo de dados, e riscos.</p>
+<h2 id="atualizacao-de-documentacao-de-api">Atualização de Documentação de API</h2>
+<p>Trabalho em curso para atualizar e manter a documentação de API, garantindo que esteja acessível e clara para todos os usuários. </p>
+<h1 id="referencias-e-boas-praticas">Referências e Boas Práticas</h1>
+<p>Para assegurar que as melhores práticas sejam seguidas, aqui estão alguns links úteis que podem ser incorporados ao documento de arquitetura:</p>
+<ul>
+<li>Boas Práticas de Desenvolvimento em Java/Spring Boot: <a href="https://docs.spring.io/spring-boot/">Spring Official Documentation</a></li>
+<li>Diretrizes para Python: <a href="https://www.developer.com/languages/python-best-practices/">Python Best Practices Guide</a></li>
+<li>React e React Native: <a href="https://www.developer.com/languages/python-best-practices/">React Official Documentation</a></li>
+<li>Next.js para SSR: <a href="https://nextjs.org/docs">Next.js Documentation</a></li>
+<li>Vue e Nuxt.js: <a href="https://nextjs.org/docs">Vue.js Style Guide e Nuxt.js Documentation</a></li>
+<li>Node.js Best Practices: <a href="https://github.com/goldbergyoni/nodebestpractices">Node.js Best Practices</a></li>
+<li>Git – melhores práticas - <a href="https://git-scm.com/book/en/v2">git</a></li>
+<li>One Flow - <a href="https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow">One Flow</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Ciclo-de-Desenvolvimeto/" class="btn btn-neutral float-right" title="Ciclo de Desenvolvimeto">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Ciclo-de-Desenvolvimeto/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

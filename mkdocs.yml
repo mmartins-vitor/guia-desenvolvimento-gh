@@ -1,0 +1,10 @@
+site_name: Diretrizes de Desenvolvimento
+nav:
+  - Home: index.md
+  - Diretrizes de Desenvolvimento EMAP : diretrizes-de-arquitetura.md
+  - Ciclo de Desenvolvimeto: Ciclo-de-Desenvolvimeto.md
+  - Modelagem de Dados: modelagem-de-dados.md
+  - Documentação Técnica: documentacao-tecnica.md
+  #- Desenvolvimento Low Code: desenvolvimento-low-code.md
+
+theme: readthedocs
