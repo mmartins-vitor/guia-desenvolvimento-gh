@@ -111,8 +111,8 @@ Os responsáveis pela etapa de desenvolvimento são:
 | Low Code        | [Guia de Desenvolvimento Low Code](desenvolvimento-low-code.md) |
 | Aplicação Streamlit | [Guia de Desenvolvimento Streamlit](desenvolvimento-streamlit.md) |
 | Aplicação Django | [Guia de Desenvolvimento Django](desenvolvimento-django.md) |
-| Aplicação FastAPI | [Guia de Desenvolvimento FastAPI]() |
-| Ciencia de dados aplicada a portos | [Guia de Desenvolvimento Análise de dados aplicada a portos]() |
+| Aplicação FastAPI | [Guia de Desenvolvimento FastAPI](desenvolvimento-fastapi.md) |
+| Ciencia de dados aplicada a portos | [Guia de Desenvolvimento Ciência de dados aplicada a portos](desenvolvimento-ciencia-de-dados.md) |
 
 ## Teste
 
