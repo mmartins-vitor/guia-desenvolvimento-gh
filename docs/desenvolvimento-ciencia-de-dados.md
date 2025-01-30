@@ -32,7 +32,7 @@ A ciência de dados pode ser aplicada em portos para otimizar operações, melho
 1. **Python**: Amplamente utilizada por sua simplicidade e vasta gama de bibliotecas (Pandas, NumPy, Scikit-learn).
 2. **R**: Linguagem especializada em análise estatística e visualização de dados.
 3. **SQL**: Linguagem para manipulação e consulta de bancos de dados relacionais.
-4. **Scala**: Linguagem que combina programação orientada a objetos com funcional, frequentemente usada com Apache Spark.
+4. **Scala**: Linguagem que combina programação orientada a objetos com funcional, frequentemente usada com Apache Spark. testetstetstetstestes
 
 ```python
 # Exemplo de código em Python para análise de dados
