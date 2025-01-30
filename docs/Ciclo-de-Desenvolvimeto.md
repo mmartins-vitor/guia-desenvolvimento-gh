@@ -90,7 +90,7 @@ Este capítulo será dividido em duas etapas descrevendo as metodologias e boas 
 
 ---
 ### Definição
-A etapa de desenvolvimento envolve todo o processo de prototipação do produto definido juntamente com o P.O e stackholders, podendo ser um site, uma API, ou um aplicativo, desenvolvido utilizando tecnologia Low Code ou linguagem de programação de alto nível. 
+A etapa de desenvolvimento envolve todo o processo de prototipação do produto definido juntamente com o P.O e stackholders, podendo ser um site, uma API, ou um aplicativo, desenvolvido utilizando tecnologia Low Code ou linguagem de programação de alto nível. No contexto do desenvolvimento de produtos de base tecnológica da GEPDI, utiliza-se como boas práticas a [arquitetura MVC](arquitetura-mvc.md)
 
 ### Entradas
 A etapa de desenvolvimento exige como entrada primeiramente o desenvolvimento do documento de requisitos contendo as funcionalidades/features do produto, além de,  o desenvolvimento do mock-up realizado pelo responsável da etapa de design.
