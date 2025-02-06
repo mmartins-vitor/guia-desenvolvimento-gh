@@ -28,7 +28,14 @@ No Guia de Mapeamento de Projetos, capítulo “Metodologia de Mapeamento” (co
 
 Todos os requisitos de desenvolvimento devem ser formalmente documentados e aprovados antes do início de qualquer projeto. Isso inclui a assinatura física ou eletrônica dos responsáveis das áreas de negócio. Conforme política já estabelecida, as informações podem ser acessadas na intranet acessando a seguinte url: Documento de Requisitos. 
 A etapa de análise de requisitos, requer como entregáveis o documento de análise de requisitos (Intranet > Sistema de Gestão de Segurança da Informação > Procedimentos > EMAP-PC-72 > Documento de levantamento e análise de requisitos de sistema). 
+
 ![analide de requisitos](images/image.png)
+
+
+
+>   
+    A documentação de requisitos deve ser desenvolvida apenas para projetos de High Code.
+
 
 ### Responsáveis
 A etapa de análise de requisitos de projetos de base tecnológica é de responsabilidade de toda a equipe de desenvolvedores do projeto, além do PO responsável. 
@@ -36,22 +43,25 @@ A etapa de análise de requisitos de projetos de base tecnológica é de respons
 ## Planejamento
 
 ---
+
 ### Definição
 A fase de planejamento envolve a criação de um roadmap detalhado do projeto. O objetivo principal é identificar os requisitos, definir as metas, estabelecer o escopo, priorizar funcionalidades e criar cronogramas realistas. Essa fase também aborda a alocação de recursos, identificação de riscos e planejamento de estratégias de mitigação.
 
 ### Entradas
 Os inputs para o produto da etapa de planejamento são:
+
 - Project Brief: Requisitos iniciais dos clientes
 - Documento de análise de requisito: informações iniciais sobre o que o software deve fazer.
 - Ferramentas de gestão de projetos: Planner e Excel 
 
 ### Entregáveis
 Os produtos gerados nessa fase incluem os entregáveis produzidos pela etapa de Elaboração de roadmap + cronograma de projeto, detalhados no Guia de Mapeamento de projetos, etapa 5 (Proposta de produto de base tecnológica) :
+
 - Plano de projeto: Contendo cronograma, fluxograma.
 - Definição do escopo: Limites do projeto e lista de exclusões.
 
 #### FLuxograma 
-Documento utilizado na 4ª Etapa - Validação de  ideias e 5ª Etapa - Proposta de produto (Para produtos de base tecnológica) do Mapeamento de Processos: deverá ser preenchido pelo PO, de acordo com as boas práticas de fluxos de mapeamento de processos, respeitando as simbologias e métodos padrões.
+Documento utilizado na **4ª Etapa - Validação de  ideias** e **5ª Etapa - Proposta de produto** (Para produtos de base tecnológica) do **Guia de Mapeamento de Projetos**: deverá ser preenchido pelo PO, de acordo com as boas práticas de fluxos de mapeamento de processos, respeitando as simbologias e métodos padrões.
 ![analide de requisitos](images/fluxograma.png)
 
 #### Cronograma
@@ -142,24 +152,61 @@ A etapa de testes no ciclo de desenvolvimento de software tem como objetivo vali
 ### Responsáveis
 
 Os responsáveis pela etapa de desenvolvimento são: 
+
 - Desenvolvedores ativos no projeto
 - Gerente de projetos ou líder técnico, para assegurar que todas as etapas foram seguidas corretamente e comunicar ao cliente ou usuários sobre a disponibilidade do sistema.
 - Testadores automatizados, se a equipe utilizar ferramentas de automação para testes de regressão ou performance.
 
 #### Teste de usuabilidade
 
-(Em Contrução)
-: Durante o desenvolvimento do cronograma (mapeamento de processos), os P.O's juntamento com desenvolvedores estabelecem marcos baseados em entregas de módulos para aplicação dos testes de usabilidade. Dessa forma, durante o desenvolvimento, aplica-se o teste, tornando o processo mais fluido e captando possíveis bugs antes da entrega final. Essa aplicação será uma entrega das validações semanais. 
+O teste de usabilidade é um dos aspectos mais importantes no desenvolvimento de software, pois garante que o produto final seja intuitivo, acessível e eficiente para os usuários. Esse tipo de teste avalia a experiência do usuário (UX) ao interagir com o sistema, identificando problemas de navegação, layout, fluxo de tarefas e compreensão da interface.
 
-## Deploy 
-(Em contrução)
-### Deploy de aplicativos Power Apps
-### Deploy de Aplicações Web
-### Deploy de aplicativos Power BI
+Durante o desenvolvimento do cronograma, utilizado na 5ª Etapa - Proposta de
+produto do [Mapeamento de Processos](https://emapmagovbr-my.sharepoint.com/shared?id=%2Fpersonal%2Fgabriel%5Fcassia%5Femap%5Fma%5Fgov%5Fbr%2FDocuments%2FGEPDI%2F03%2E%20Planejamento%20e%20Qualidade%2F0%2E%20Documentos&listurl=%2Fpersonal%2Fgabriel%5Fcassia%5Femap%5Fma%5Fgov%5Fbr%2FDocuments), preenchido pelo PO para que o Time do Projeto se guie nos prazos e entregas do produto, os P.O's juntamento com desenvolvedores estabelecem marcos baseados em entregas de módulos para aplicação dos testes de usabilidade. Dessa forma, durante o desenvolvimento, aplica-se o teste, tornando o processo mais fluido e captando possíveis bugs antes da entrega final. Essa aplicação será uma entrega das validações semanais. O Documente **Teste de usuabilidade** pode ser encontrado em: [link]().
+
+## <center> Deploy 
+
+### Definição
+
+A fase de deploy é a etapa final do ciclo de desenvolvimento de software, onde o sistema ou aplicação é transferido para o ambiente de produção. Nessa fase, o produto desenvolvido é disponibilizado para os usuários finais ou clientes, com o objetivo de ser utilizado de forma definitiva. O deploy pode envolver diferentes atividades, como a instalação do software em servidores, configuração de ambientes, realização de testes pós-deploy e monitoramento inicial.
+
+### Entradas
+
+- Código final do sistema, após testes e validação.
+- Documentação técnica e de usuário.
+- Ambiente de produção configurado e pronto para receber o software.
+- Resultados dos testes de integração e testes de aceitação.
+- Monitoramento e métricas de performance esperadas.
+
+### Entregáveis
+
+- Sistema ou aplicação em funcionamento no ambiente de produção.
+- Relatório de status do deploy, incluindo qualquer ocorrência ou problema.
+- Logs e métricas de monitoramento do sistema após o deploy.
+- Possíveis atualizações ou ajustes pós-deploy baseados em feedback ou erros encontrados.
+
+### Responsáveis
+
+Os responsáveis pela etapa de desenvolvimento são: 
+
+- Desenvolvedores ativos no projeto
+- Gerente de projetos ou líder técnico, para assegurar que todas as etapas foram seguidas corretamente e comunicar ao cliente ou usuários sobre a disponibilidade do sistema.
+
+--- 
+
+| Produto         | Diretriz    | 
+| --------------- | ----------- |
+| Low Code        | [Deploy de aplicativos power apps](deploy-low-code.md) |
+| Web App         | [Deploy de aplicações web](deploy-low-code.md) |
+| Power BI        | [Deploy de relatórios BI](deploy-low-code.md) |
+
+
+
 
 ## Monitoramento
 (Em contrução)
 ### Validação
+
 ### Report
 
 
