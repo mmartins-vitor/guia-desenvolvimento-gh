@@ -124,7 +124,7 @@ Os responsáveis pela etapa de desenvolvimento são:
 | Aplicação FastAPI | [Guia de Desenvolvimento FastAPI](desenvolvimento-fastapi.md) |
 | Ciencia de dados aplicada a portos | [Guia de Desenvolvimento Ciência de dados aplicada a portos](desenvolvimento-ciencia-de-dados.md) |
 
-## Teste
+## <center> Teste
 
 A etapa de testes geralmente envolve a execução de diferentes tipos de testes, como testes unitários, testes de integração, testes de sistema, testes de aceitação, entre outros. O presente capítulo será dividido entre teste de usuabilidade  e Testes unitários, sendo esse divido entre teste de soluções Low Code e teste para soluções desenvolvidas com linguagem de programação de alto nível.
 
@@ -200,12 +200,9 @@ Os responsáveis pela etapa de desenvolvimento são:
 | Web App         | [Deploy de aplicações web](deploy-low-code.md) |
 | Power BI        | [Deploy de relatórios BI](deploy-low-code.md) |
 
-
-
-
-## Monitoramento
-(Em contrução)
 ### Validação
+
+
 
 ### Report
 
