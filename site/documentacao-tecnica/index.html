@@ -58,9 +58,15 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Documentação Técnica</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#docs">Docs</a>
+    <li class="toctree-l2"><a class="reference internal" href="#estrutura-basica-de-uma-documentacao-tecnica">Estrutura básica de uma documentação técnica</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#intrucoes-para-documentacao">Intruções para documentação</a>
+    <li class="toctree-l2"><a class="reference internal" href="#docs">Docs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#criando-documentacao-no-docs">Criando documentação no Docs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentacao-manual-utilizando-mkdocs">Documentação manual utilizando MkDocs</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#instalacao-do-mkdocs">Instalação do MkDocs</a>
     </li>
@@ -70,33 +76,23 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#estrutura-basica-de-uma-documentacao-tecnica">Estrutura básica de uma documentação técnica</a>
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-documentacao">Tipos de Documentação</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#documentacao-para-aplicacao-low-code">Documentação para aplicação Low Code</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#documentacao-de-aplicacoes-power-apps">Documentação de aplicações Power Apps</a>
+    <li class="toctree-l3"><a class="reference internal" href="#documentacao-de-aplicacoes-web">Documentação de aplicações web</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#visao-geral">Visão Geral</a>
+    <li class="toctree-l4"><a class="reference internal" href="#principais-tipos-de-documentacao">📝 Principais Tipos de Documentação</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#primeiros-passos">Primeiros passos</a>
+    <li class="toctree-l4"><a class="reference internal" href="#ferramentas-uteis">🛠 Ferramentas Úteis</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#principais-componentes">Principais componentes</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#funcionalidades">Funcionalidades</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#power-automate-flow">Power Automate Flow</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#best-pratices">Best pratices</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#manutencao-e-atualizacao">Manutenção e Atualização</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#seguranca">Segurança</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#anexos">Anexos</a>
+    <li class="toctree-l4"><a class="reference internal" href="#boas-praticas">✅ Boas Práticas</a>
     </li>
         </ul>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#intrucoes-diretrizes-para-documentacao">Intruções (Diretrizes) para Documentação</a>
     </li>
     </ul>
                 </li>
@@ -124,15 +120,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="documentacao-tecnica">Documentação técnica</h1>
+                <h1 id="documentacao-tecnica"><center> Documentação técnica</h1>
 <p>A documentação técnica é uma etapa essencial no ciclo de desenvolvimento de software (SDLC, do inglês Software Development Life Cycle), garantindo que todas as partes interessadas tenham um entendimento claro sobre o sistema. Ela facilita a comunicação, a manutenção e a escalabilidade do projeto, servindo como referência durante todo o processo.</p>
 <p>Para a documentação técnica das aplicações desenvolvidas, a GETIN solicita que os desenvolvedores utilizem do projeto docs, onde são compiladas todas as documentações de soluções desenvolvidas para o Porto do Itaqui. </p>
-<p>Dentro da Gerencia de Pesquisa, Desenvolvimento e Inovação, a documentação dos produtos tecnológicos se divide em: Aplicações Low Code e Aplicações de Alto nível. </p>
-<h2 id="docs">Docs</h2>
-<p>O Docs é um sistema web desenvolvido para armazenamento e compartilhamento de documentações técnicas em formato de markdown das soluções de base tecnológica desenvolvidas para o Porto do Itaqui. O sistema é monitorado pela Gerência de Tecnologia da Informação (GETIN) e o acesso deve ser solicitado para a mesma via servicedesk.</p>
+<p>Dentro da Gerencia de Pesquisa, Desenvolvimento e Inovação, a documentação dos produtos tecnológicos se divide em: Aplicações Low Code e Aplicações de Alto nível. As documentações de projetos desenvolvidos para a EMAP são mantidas dentro do repositório Docs. O processo de documentação pode ser realizado tanto através de arquivos markdown utilizando a biblioteca <strong>mkdocs</strong>, quanto através da própria ferramenta de adição do sistema <strong>Docs</strong>.</p>
+<h2 id="estrutura-basica-de-uma-documentacao-tecnica"><center> Estrutura básica de uma documentação técnica</h2>
+<p>A estrutura básica de uma documentação técnica de software deve ser bem organizada e clara, para facilitar a compreensão dos leitores, sejam eles desenvolvedores, usuários finais ou outros stakeholders. Abaixo estão os elementos essenciais que geralmente compõem uma boa documentação técnica:</p>
+<ul>
+<li>Overview:</li>
+<li>Getting Started:</li>
+<li>Core componentes and Features</li>
+<li>Best pratices</li>
+<li>Integrations with external services</li>
+<li>Troubleshooting and suport</li>
+<li>Cases</li>
+</ul>
+<h2 id="docs"><center> Docs</h2>
+<p>O <a href="https://captcha.portodoitaqui.com/?redirect=https://docs.portodoitaqui.com/">Docs</a> é um sistema web desenvolvido para armazenamento e compartilhamento de documentações técnicas em formato de markdown das soluções de base tecnológica desenvolvidas para o Porto do Itaqui. O sistema é monitorado pela Gerência de Tecnologia da Informação (GETIN) e o acesso deve ser solicitado para a mesma via servicedesk.</p>
+<h3 id="criando-documentacao-no-docs">Criando documentação no Docs</h3>
+<p>Para desenvolver a documentação do projeto no sistema Docs, como requisito é necessário a solicitação de acesso ao sistema via <strong>service desk</strong>. </p>
 <p><img alt="" src="../images/docs.png" /></p>
-<h2 id="intrucoes-para-documentacao">Intruções para documentação</h2>
-<p>A documentação técnica do projeto deve ser feita em formato markdown e recomenda-se a utilização da biblioteca MKdocs para o desenvolvimento do arquivo. </p>
+<p>Para criar uma nova estande (Documentação de projeto), o desenvolvedor deve selecionar a opção <strong>nova estante</strong> localizada no menu vertical ao lado esquerdo da tela. </p>
+<p><img alt="" src="../images/nova-estante.png" /></p>
+<p>Com a estante já criada, para adicionar e editar novas páginas à documentação, o usuário deve selecionar a opção <strong>novo capítulo</strong> no menu vertical localizado no lado esquerdo da tela.</p>
+<p><img alt="" src="../images/novo-cap.png" /></p>
+<blockquote>
+<p>A documentação deve ser escrita seguindo a sintaxe da linguagem Markdown. Para mais informações acesse a <a href="https://www.markdownguide.org/">documentação oficial</a>.</p>
+</blockquote>
+<h2 id="documentacao-manual-utilizando-mkdocs"><center> Documentação manual utilizando MkDocs</h2>
+<p>A documentação técnica "manual" do projeto deve ser feita em formato markdown e recomenda-se a utilização da biblioteca MKdocs para o desenvolvimento do arquivo. </p>
 <p>MkDocs é um gerador de sites estáticos rápido, simples, voltado para a criação de documentação de projetos. Os arquivos de origem da documentação são escritos em Markdown e configurados com um único arquivo de configuração YAML.</p>
 <h3 id="instalacao-do-mkdocs">Instalação do MkDocs</h3>
 <p>Com o vscode aberto e localizada no repositório do projeto que deve ser documentado, para instalar o MKDocs, rode o seguinte comando na linha de comandos do terminal.</p>
@@ -155,119 +171,98 @@ cd my-project
 <pre><code>mkdocs build
 </code></pre>
 <p>Isso criará um novo diretório chamado site. Para mais informações e detalhes sobre a utilização do Mkdocs, consulte: <a href="https://www.mkdocs.org/getting-started/">Documentação MkDocs</a></p>
-<h2 id="estrutura-basica-de-uma-documentacao-tecnica">Estrutura básica de uma documentação técnica</h2>
-<p>A estrutura básica de uma documentação técnica de software deve ser bem organizada e clara, para facilitar a compreensão dos leitores, sejam eles desenvolvedores, usuários finais ou outros stakeholders. Abaixo estão os elementos essenciais que geralmente compõem uma boa documentação técnica:</p>
-<ul>
-<li>Overview:</li>
-<li>Getting Started:</li>
-<li>Core componentes and Features</li>
-<li>Best pratices</li>
-<li>Integrations with external services</li>
-<li>Troubleshooting and suport</li>
-<li>Cases</li>
-</ul>
+<h2 id="tipos-de-documentacao"><center> Tipos de Documentação</h2>
 <h3 id="documentacao-para-aplicacao-low-code">Documentação para aplicação Low Code</h3>
 <p>Low-code é uma abordagem inovadora ao desenvolvimento de software que permite a criação de aplicações de forma rápida e eficiente, utilizando ferramentas que minimizam a necessidade de codificação manual. </p>
 <p>Essa metodologia é baseada no uso de interfaces visuais, componentes de arrastar e soltar, e automação para gerar códigos, permitindo que desenvolvedores e outros profissionais participem do processo de desenvolvimento sem necessariamente possuírem habilidades técnicas avançadas.</p>
 <p>Os casos de uso de plataformas low-code são diversos e abrangem diferentes áreas de aplicação. Alguns dos principais incluem:</p>
-<blockquote>
-<p><strong>Desenvolvimento de Aplicações Empresariais</strong>
-: Plataformas low-code são amplamente utilizadas para criar aplicações empresariais voltadas para gestão de processos internos, como CRM, ERP, e sistemas de gestão de contratos. Esses sistemas podem ser personalizados de acordo com as necessidades específicas de cada organização.</p>
-<p><strong>Automatização de Processos de Negócio (BPA)</strong>
-: Empresas utilizam low-code para automatizar fluxos de trabalho manuais e repetitivos, aumentando a eficiência e reduzindo erros. Exemplos incluem aprovações de solicitações, processamento de pedidos e gestão de faturas.</p>
-<p><strong>Prototipagem e MVP (Produto Mínimo Viável)</strong>
-: Startups e equipes de inovação utilizam plataformas low-code para criar protótipos rápidos e MVPs, validando ideias de produtos antes de investir em desenvolvimento completo.</p>
-<p><strong>Integração de Sistemas</strong>
-: O low-code permite conectar diferentes sistemas e bases de dados, criando soluções integradas que melhoram a troca de informações entre departamentos ou organizações.</p>
-<p><strong>Criação de Portais e Aplicativos para Clientes</strong>
-: Muitas empresas criam portais web e aplicativos móveis para interação com clientes, como agendamentos, suporte ou monitoramento de serviços, usando plataformas low-code.</p>
-<p><strong>Análise de Dados e Relatórios</strong>
-: Ferramentas low-code podem ser usadas para desenvolver dashboards e relatórios interativos, facilitando a tomada de decisão baseada em dados.</p>
-</blockquote>
+<ul>
+<li>1️⃣ <strong>Desenvolvimento de Aplicações Empresariais</strong></li>
+</ul>
+<p>Plataformas low-code são amplamente utilizadas para criar aplicações empresariais voltadas para gestão de processos internos, como CRM, ERP, e sistemas de gestão de contratos. Esses sistemas podem ser personalizados de acordo com as necessidades específicas de cada organização.</p>
+<ul>
+<li>2️⃣ <strong>Automatização de Processos de Negócio (BPA)</strong></li>
+</ul>
+<p>Empresas utilizam low-code para automatizar fluxos de trabalho manuais e repetitivos, aumentando a eficiência e reduzindo erros. Exemplos incluem aprovações de solicitações, processamento de pedidos e gestão de faturas.</p>
+<ul>
+<li>3️⃣ <strong>Prototipagem e MVP (Produto Mínimo Viável)</strong></li>
+</ul>
+<p>Startups e equipes de inovação utilizam plataformas low-code para criar protótipos rápidos e MVPs, validando ideias de produtos antes de investir em desenvolvimento completo.</p>
+<ul>
+<li>4️⃣ <strong>Integração de Sistemas</strong></li>
+</ul>
+<p>O low-code permite conectar diferentes sistemas e bases de dados, criando soluções integradas que melhoram a troca de informações entre departamentos ou organizações.</p>
+<ul>
+<li>5️⃣ <strong>Criação de Portais e Aplicativos para Clientes</strong></li>
+</ul>
+<p>Muitas empresas criam portais web e aplicativos móveis para interação com clientes, como agendamentos, suporte ou monitoramento de serviços, usando plataformas low-code.</p>
+<ul>
+<li>6️⃣ <strong>Análise de Dados e Relatórios</strong>
+Ferramentas low-code podem ser usadas para desenvolver dashboards e relatórios interativos, facilitando a tomada de decisão baseada em dados.</li>
+</ul>
 <p>A documentação de low-code é uma coleção abrangente de recursos, diretrizes e instruções que facilitam o entendimento, a implementação e o uso eficaz de plataformas e ferramentas de desenvolvimento low-code de maneira eficiente, clara e concisa. </p>
-<h3 id="documentacao-de-aplicacoes-power-apps"><strong>Documentação de aplicações Power Apps</strong></h3>
-<p>O modelo de desenvolvimento no Power Apps é baseado em desenvolvimento low-code, que permite criar aplicativos de forma rápida e com mínima necessidade de codificação tradicional. Ele utiliza uma abordagem visual e declarativa, onde os desenvolvedores podem criar aplicativos utilizando interfaces intuitivas, componentes pré-construídos e lógica configurável.</p>
-<p>Os principais componentes da documentação de low-code geralmente incluem os seguintes:</p>
-<h4 id="visao-geral">Visão Geral</h4>
-<p>Esta seção apresenta a plataforma de low-code com uma breve descrição do projeto uma definição clara das principais funcionalidades, explicando seus principais recursos e capacidades. No caso de aplicações Power Apps, deve abordar:</p>
-<blockquote>
-<p>Arquitetura geral: contenddo a descrição da arquitetura do projeto através de um diagrama de alto nível das integrações do aplicativo com outras ferramentas.</p>
-<p>Fluxo de trabalho: Explicação do fluxo geral do usuário, diagramas de processo ou fluxogramas para ilustrar os passos principais.</p>
-</blockquote>
-<h4 id="primeiros-passos">Primeiros passos</h4>
-<p>Uma parte essencial da documentação de low-code, esta seção fornece aos usuários instruções passo a passo, orientando-os no processo de configuração do ambiente de desenvolvimento, criação de uma conta, acesso às ferramentas relevantes dentro da plataforma e início do primeiro projeto. Geralmente, também inclui um guia detalhado sobre o processo de design da interface do usuário (UI), utilizando a funcionalidade de arrastar e soltar e blocos visuais para aplicativos backend, componentes web e elementos de UI móvel.</p>
-<h4 id="principais-componentes">Principais componentes</h4>
-<p>Esta seção aprofunda-se nas principais capacidades da plataforma, incluindo, mas não se limitando a, modelagem de dados, visualização de processos de negócios, funcionalidades e técnicas de design. Geralmente, fornece explicações claras sobre cada componente, como os processos de negócios, conexões API, etc. No caso de aplicações desenvolvidas com Power Apps, divide-se em:</p>
-<h5 id="estrutura-do-aplicativo">Estrutura do aplicativo:</h5>
+<h3 id="documentacao-de-aplicacoes-web">Documentação de aplicações web</h3>
+<p>A documentação técnica organiza informações essenciais para o desenvolvimento, manutenção e escalabilidade de projetos web.  </p>
+<h4 id="principais-tipos-de-documentacao">📝 <strong>Principais Tipos de Documentação</strong></h4>
 <ul>
-<li>Telas: Descrição da nomenclatura da lógica das telas e do fluxograma de acesso e permissões de usuários. Nessa etapa é importante detalhar funções de visualização e modos de display, baseados na regra de nível de acesso do produto.</li>
-<li>componentes: os componentes power apps são modelos pré-prontos disponibilizados pela plataforma, dentro dos componentes, especificações de propriedades devem ser detalhadas de acordo com cada funcionalidade desejada.</li>
-<li>Conexões de dados: Descreve-se as fontes de dados e tabelas utilizadas na tela, bem como uso de variáveis globais e coleções</li>
-<li>Variáveis e contextos: descrição da lista de variáveis com informações:<ul>
-<li>nome </li>
-<li>tipo</li>
-<li>uso</li>
-<li>Tela de origem</li>
-</ul>
+<li>
+<p>1️⃣ <strong>Requisitos do Projeto</strong><br />
+Define escopo, funcionalidades e tecnologias.  </p>
+</li>
+<li>
+<p>2️⃣ <strong>Arquitetura do Sistema</strong><br />
+Diagramas UML, estrutura de banco de dados e fluxo de dados.  </p>
+</li>
+<li>
+<p>3️⃣ <strong>Guia de Configuração e Deploy</strong><br />
+Passos para instalação, configuração e publicação do projeto.  </p>
+</li>
+<li>
+<p>4️⃣ <strong>Documentação da API</strong><br />
+Endpoints, métodos, parâmetros e respostas detalhadas (ex.: Swagger).  </p>
+</li>
+<li>
+<p>5️⃣ <strong>Padrões de Código</strong><br />
+Linting, convenções de nomeação e padrões de commits.  </p>
+</li>
+<li>
+<p>6️⃣ <strong>Modelo de Banco de Dados</strong><br />
+Diagramas ER e estrutura das tabelas.  </p>
 </li>
 </ul>
-<h4 id="funcionalidades">Funcionalidades</h4>
-<p>Nesse tópico deve-se detalhas as funcionalidades-chave do aplicativos, tais como, CRUD, pesquisas e filtros, além de quaisquer lógica personalizada implementada.</p>
-<h4 id="power-automate-flow">Power Automate Flow</h4>
-<ul>
-<li>Lista de fluxos integrados ao aplicativo.</li>
-<li>Explicação de como são acionados e seu propósito.</li>
-<li>URLs de edição no Power Automate (se necessário).</li>
-</ul>
-<h4 id="best-pratices">Best pratices</h4>
-<p>Esta parte da documentação abrange uma série de recomendações úteis, dicas e diretrizes para utilizar a plataforma de maneira eficiente, garantindo a conformidade com os padrões da indústria e facilitando resultados ideais de desenvolvimento e implantação. Os tópicos abordados geralmente incluem segurança, otimização de desempenho, manutenção e escalabilidade das aplicações geradas.</p>
-<h4 id="manutencao-e-atualizacao">Manutenção e Atualização</h4>
-<ul>
-<li>Procedimentos de Atualização:<ul>
-<li>Como publicar atualizações sem impactar usuários finais.</li>
-<li>Procedimento para teste em ambiente de desenvolvimento ou homologação.</li>
-</ul>
-</li>
-<li>Erros Comuns e Soluções:<ul>
-<li>Lista de problemas conhecidos e como solucioná-los.</li>
-</ul>
-</li>
-<li>Monitoramento:<ul>
-<li>Como monitorar o uso do aplicativo (ex.: uso do Power Platform Analytics).</li>
-<li>Explicação de logs ou métricas que podem ser usados para diagnóstico.</li>
-</ul>
-</li>
-</ul>
-<h4 id="seguranca">Segurança</h4>
-<ul>
-<li>Papéis e Permissões:<ul>
-<li>Perfis de acesso definidos no aplicativo.</li>
-<li>Quais controles ou dados são restritos a determinados papéis.</li>
-</ul>
-</li>
-<li>Autenticação e Autorização:<ul>
-<li>Como o acesso é gerenciado (ex.: autenticação via Azure AD).</li>
-<li>Explicação de compartilhamento com usuários ou grupos.</li>
-</ul>
-</li>
-</ul>
-<h4 id="anexos">Anexos</h4>
-<ul>
-<li>Código e Fórmulas:<ul>
-<li>Repositório central para fórmulas importantes ou reutilizáveis.</li>
-<li>Explicação de fórmulas complexas ou scripts usados no aplicativo.</li>
-</ul>
-</li>
-<li>Exemplos de Uso:<ul>
-<li>Cenários de uso típicos.</li>
-</ul>
-</li>
-<li>Recursos Relacionados:<ul>
-<li>Links para documentação oficial do Power Apps.</li>
-<li>Tutoriais ou treinamentos específicos para o aplicativo.</li>
-</ul>
-</li>
-</ul>
+<h4 id="ferramentas-uteis">🛠 <strong>Ferramentas Úteis</strong></h4>
+<p>🔹 <strong>Markdown</strong> (GitHub Docs)<br />
+🔹 <strong>Swagger/OpenAPI</strong> (APIs)<br />
+🔹 <strong>Notion, Confluence</strong> (Colaboração)<br />
+🔹 <strong>Docusaurus</strong> (Sites de documentação)  </p>
+<h4 id="boas-praticas">✅ <strong>Boas Práticas</strong></h4>
+<p>✔ Atualizar frequentemente<br />
+✔ Incluir exemplos claros<br />
+✔ Automatizar sempre que possível  </p>
+<p>Documentação bem feita melhora a colaboração e a manutenção do projeto! 🚀</p>
+<h2 id="intrucoes-diretrizes-para-documentacao"><center> Intruções (Diretrizes) para Documentação</h2>
+<table>
+<thead>
+<tr>
+<th>Documentação</th>
+<th>Produto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low Code</td>
+<td><a href="../documentacao-low-code/">Intruções de documentação Low Code</a></td>
+</tr>
+<tr>
+<td>Aplicação Streamlit</td>
+<td><a href="../documentacao-web-app/">Intruções de documentação Web Ap</a></td>
+</tr>
+<tr>
+<td>Aplicação Django</td>
+<td><a href="">Intruções de documentação BI</a></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
