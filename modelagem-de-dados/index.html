@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Modelagem de Dados - Diretrizes de Desenvolvimento</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Modelagem de Dados";
+        var mkdocs_page_input_path = "modelagem-de-dados.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Diretrizes de Desenvolvimento
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../diretrizes-de-arquitetura/">Diretrizes de Desenvolvimento EMAP</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Ciclo-de-Desenvolvimeto/">Ciclo de Desenvolvimeto</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Modelagem de Dados</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#diagrama-entidade-relacao">Diagrama Entidade-Relação</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modelagem-fisica">Modelagem física</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sharepoint">SharePoint</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentacao-tecnica/">Documentação Técnica</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Diretrizes de Desenvolvimento</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Modelagem de Dados</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="modelagem-de-dados">Modelagem de Dados</h1>
+<p>A etapa de modelagem de dados no ciclo de desenvolvimento de software é crucial para estruturação e organização de informações que serão manipuladas pelo sistema. Nessa fase, busca-se criar representações abstratas dos dados e suas relações, garantindo que o sistema seja capaz de armazenar, acessar e gerenciar informações de forma eficiente e consistente.
+A modelagem de dados divide-se em três fases, modelagem conceitual, onde há a representação dos dados de forma abstrata, normalmente através de um diagrama entidade relação (DER), que, em projetos desenvolvidos pela GEPDI, utiliza-se a ferramenta lucidchart;  A modelagem lógica, traduz o modelo conceitual em um formato mais detalhado, independente de tecnologia, mas com maior especificidade; por fim, a Modelagem física, onde detalha-se a implementação em um banco de dados específico escolhido (MySQL, SharePoint, Postgress).</p>
+<h2 id="diagrama-entidade-relacao">Diagrama Entidade-Relação</h2>
+<p>A etapa de modelagem de dados no ciclo de desenvolvimento de software é crucial para estruturação e organização de informações que serão manipuladas pelo sistema. Nessa fase, busca-se criar representações abstratas dos dados e suas relações, garantindo que o sistema seja capaz de armazenar, acessar e gerenciar informações de forma eficiente e consistente.
+A modelagem de dados divide-se em três fases, modelagem conceitual, onde há a representação dos dados de forma abstrata, normalmente através de um diagrama entidade relação (DER), que, em projetos desenvolvidos pela GEPDI, utiliza-se a ferramenta lucidchart;  A modelagem lógica, traduz o modelo conceitual em um formato mais detalhado, independente de tecnologia, mas com maior especificidade; por fim, a Modelagem física, onde detalha-se a implementação em um banco de dados específico escolhido (MySQL, SharePoint, Postgress).</p>
+<p><img alt="" src="../images/DER.png" /></p>
+<h2 id="modelagem-fisica">Modelagem física</h2>
+<p>A modelagem física na modelagem de dados é crucial, pois ela transforma o modelo lógico de dados em uma estrutura que pode ser implementada efetivamente em um sistema de gerenciamento de banco de dados (SGBD). Enquanto a modelagem lógica foca na organização e no relacionamento dos dados de uma forma abstrata e independente de plataforma, a modelagem física leva em consideração aspectos específicos do SGBD e da infraestrutura tecnológica onde os dados serão armazenados e manipulados. Dentro do contexto do desenvolvimento de projetos da Gerencia de Pesquisa, Desenvolvimento e Inovação, alguns sistemas de gerenciamento de bancos de dados utilizados são, MySQL , SQL Server, Oracle. 
+Ainda sobre SGBD, vale ressaltar a utilização do SharePoint, principalmente em aplicativos desenvolvidos com Low Code, como uma espécie de Sistema de Gerenciamento de Dados. </p>
+<h2 id="sharepoint">SharePoint</h2>
+<p>SharePoint é uma plataforma de colaboração da Microsoft usada para gerenciar conteúdo, documentos e informações de maneira eficaz dentro de uma organização. Ele facilita o trabalho em equipe, a comunicação e o compartilhamento de dados, promovendo um ambiente de trabalho digital integrado. O SharePoint é altamente utilizado por empresas para criar sites, intranets e repositórios de documentos, e pode ser implantado tanto em servidores locais (on-premises) quanto na nuvem (via SharePoint Online). Apesar de não ser considerado um SGBD, o SharePoint pode ser utilizado para armazenar informações e dados em desenvolvimento de aplicativos mais simples, além de manter-se dentro da segurança de uma organização.</p>
+<ul>
+<li>Criar um site no SharePoint Online:<ul>
+<li>Selecione + Criar site no Microsoft Office SharePoint Online página inicial.</li>
+<li>Selecione se você deseja criar um site de equipe ou um site de comunicação.</li>
+<li>Selecione Usar modelo em branco para começar a criar um site no modelo selecionado.</li>
+<li>Insira o nome do site. Quando você começa a inserir um nome para o site, outros campos são exibidos.</li>
+<li>Você pode inserir uma descrição do site e editar o endereço do site e o endereço de email do grupo (para um site de equipe) se desejar.</li>
+<li>Se solicitado, selecione configurações de privacidade para as informações do site.</li>
+<li>Selecione Create site.</li>
+<li>Você pode optar por adicionar membros do site e proprietários, se desejar.</li>
+<li>Selecione Concluir.</li>
+</ul>
+</li>
+<li>Adicionar uma lista ou biblioteca de documentos<ul>
+<li>Abra o site ao qual você deseja adicionar a lista ou biblioteca.</li>
+<li>Selecione Novo.</li>
+<li>Selecione Lista ou Biblioteca de documentos.</li>
+<li>Selecione Lista em branco ou biblioteca em branco para adicionar uma lista ou biblioteca de documentos ao site. </li>
+<li>No painel Criar:<ul>
+<li>Insira um nome para a lista ou biblioteca (e uma descrição, se desejar).</li>
+<li>Selecione Criar.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../images/sharepoint.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Ciclo-de-Desenvolvimeto/" class="btn btn-neutral float-left" title="Ciclo de Desenvolvimeto"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../documentacao-tecnica/" class="btn btn-neutral float-right" title="Documentação Técnica">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Ciclo-de-Desenvolvimeto/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../documentacao-tecnica/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

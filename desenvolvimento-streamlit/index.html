@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Aplicação Streamlit - Diretrizes de Desenvolvimento</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aplica\u00e7\u00e3o Streamlit";
+        var mkdocs_page_input_path = "desenvolvimento-streamlit.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Diretrizes de Desenvolvimento
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../diretrizes-de-arquitetura/">Diretrizes de Desenvolvimento EMAP</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Ciclo-de-Desenvolvimeto/">Ciclo de Desenvolvimeto</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../modelagem-de-dados/">Modelagem de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentacao-tecnica/">Documentação Técnica</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Diretrizes de Desenvolvimento</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aplicação Streamlit</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aplicacao-streamlit">Aplicação Streamlit</h1>
+<p>Streamlit é um framework Python de código aberto voltado para cientistas de dados e engenheiros de IA/ML, permitindo criar aplicativos dinâmicos de dados com apenas algumas linhas de código.</p>
+<h2 id="instalacao">Instalação</h2>
+<p><code>pip install streamlit</code></p>
+<p><code>streamlit hello</code></p>
+<h2 id="integracao-de-dados-meteocoeanograficos">Integração de dados meteocoeanográficos</h2>
+<p>Para criar o <strong>Ocean Report</strong>, é fundamental seguir um conjunto de etapas bem definidas, desde a escolha do framework até a modelagem dos dados e a configuração do ambiente de desenvolvimento. Abaixo, descrevemos o processo de forma detalhada e instrutiva.  </p>
+<hr />
+<h3 id="escolha-do-framework-baseado-na-analise-de-requisitos">Escolha do Framework Baseado na Análise de Requisitos</h3>
+<ul>
+<li>Avalie os requisitos descritos no <strong>Capítulo 6 - Ciclo de Vida do Desenvolvimento de Software</strong> antes de iniciar o desenvolvimento.  </li>
+<li>Selecione um framework que atenda às necessidades do projeto em termos de:  </li>
+<li>Escalabilidade;  </li>
+<li>Desempenho;  </li>
+<li>Suporte a bibliotecas;  </li>
+<li>Facilidade de manutenção.  </li>
+<li>Exemplos de frameworks que podem ser considerados incluem:  </li>
+<li><strong>Streamlit</strong>;  </li>
+<li><strong>Dash</strong>;  </li>
+<li><strong>Django</strong> ou <strong>Flask</strong> (para soluções web mais completas).  </li>
+</ul>
+<hr />
+<h3 id="verificacao-da-adaptacao-dos-dados-as-limitacoes-do-framework">Verificação da Adaptação dos Dados às Limitações do Framework</h3>
+<p>O framework escolhido pode impor restrições ao formato ou estrutura dos dados. Para garantir a compatibilidade:<br />
+1. <strong>Análise e Tratamento dos Dados</strong>:<br />
+   - Utilize bibliotecas como <strong>Pandas</strong>, <strong>NumPy</strong> e <strong>Xarray</strong> para manipular e organizar os dados:<br />
+     - <strong>Pandas</strong>: Manipulação de dados tabulares e séries temporais;<br />
+     - <strong>NumPy</strong>: Operações matemáticas de alto desempenho;<br />
+     - <strong>Xarray</strong>: Ideal para dados multidimensionais, como conjuntos climáticos e oceanográficos.<br />
+2. <strong>Modelagem de Dados</strong>:<br />
+   - Consulte a subseção <strong>Modelagem de Dados</strong> para obter diretrizes sobre como estruturar os dados para análise e visualização eficazes.<br />
+3. <strong>Validação dos Dados</strong>:<br />
+   - Certifique-se de que os dados estejam no formato esperado pelo framework (ex.: JSON, CSV, ou arrays numpy).  </p>
+<hr />
+<h3 id="escolha-da-ide-para-o-desenvolvimento">Escolha da IDE para o Desenvolvimento</h3>
+<p>A escrita do código deve ser feita em uma <strong>Integrated Development Environment (IDE)</strong> que facilite a organização, depuração e execução do projeto.<br />
+- Recomendamos o uso do <strong>Visual Studio Code (VSCode)</strong> pelos seguintes motivos:<br />
+  - Interface intuitiva que permite distinguir facilmente funções, variáveis e métodos;<br />
+  - Suporte a extensões úteis para o desenvolvimento Python, como <strong>Pylance</strong>, <strong>Jupyter</strong> e <strong>Python Extension</strong>;<br />
+  - Ferramentas integradas para controle de versão (Git) e depuração de código.<br />
+- Outras opções viáveis incluem:<br />
+  - <strong>PyCharm</strong>;<br />
+  - <strong>Jupyter Notebook</strong>;<br />
+  - <strong>Spyder</strong>.  </p>
+<p><img alt="" src="../images/ides.png" /></p>
+<hr />
+<h3 id="configuracao-do-ambiente-virtual">Configuração do Ambiente Virtual</h3>
+<p>A configuração de um ambiente virtual é uma etapa essencial para gerenciar as dependências de software de maneira eficiente em um projeto. Abaixo estão os passos recomendados para garantir uma configuração adequada:  </p>
+<hr />
+<h4 id="criacao-do-ambiente-virtual">Criação do Ambiente Virtual</h4>
+<ul>
+<li>Crie um ambiente virtual dentro da pasta do projeto para facilitar sua organização e portabilidade.  </li>
+<li>Utilize o comando a seguir, dependendo do gerenciador de ambientes:  </li>
+</ul>
+<p><strong>Com <code>venv</code> (Python padrão):</strong><br />
+  ```bash
+  python -m venv venv</p>
+<hr />
+<h3 id="desenvolvimento-web-com-streamlit">Desenvolvimento Web com Streamlit</h3>
+<p>Após concluir a configuração do ambiente virtual e instalar as dependências, você estará preparado para iniciar o desenvolvimento web, com as condições mínimas necessárias para dar vida à sua aplicação.  </p>
+<p>No exemplo apresentado no case, utilizamos o framework <strong>Streamlit</strong>, uma ferramenta ideal para iniciantes no desenvolvimento de aplicações web. O Streamlit oferece um módulo integrado que simplifica a criação do front-end, eliminando a necessidade de desenvolver arquivos HTML ou CSS para personalizar as telas (mockups).  </p>
+<hr />
+<h3 id="escolha-do-interpretador-python-na-ide">Escolha do Interpretador Python na IDE</h3>
+<p>Ao utilizar o <strong>Visual Studio Code (VSCode)</strong>, é importante especificar o interpretador Python que será usado. Isso garante que o código seja executado no ambiente virtual configurado.<br />
+1. Abra o VSCode e pressione <code>Ctrl+Shift+P</code> (ou <code>Cmd+Shift+P</code> no macOS).<br />
+2. Digite <strong>"Python: Select Interpreter"</strong> e selecione a opção correspondente ao ambiente virtual criado.<br />
+3. Certifique-se de que o nome do ambiente virtual está visível no canto inferior esquerdo da IDE.  </p>
+<hr />
+<h3 id="importacao-de-bibliotecas-e-frameworks">Importação de Bibliotecas e Frameworks</h3>
+<p>Mesmo que as bibliotecas e frameworks tenham sido instalados no ambiente virtual, é necessário importá-los no script do projeto para utilizá-los.  </p>
+<p><strong>Exemplo inicial de importações:</strong>  </p>
+<pre><code class="language-python">import streamlit as st
+import pandas as pd
+import numpy as np
+</code></pre>
+<hr />
+<p>Para criar sites com o Streamlit deve-se levar em consideração algumas funções básicas para estruturar as telas, segue exemplo:</p>
+<p><img alt="" src="../images/site-streamlit.png" /></p>
+<h3 id="estruturacao-do-mockup-com-streamlit">Estruturação do Mockup com Streamlit</h3>
+<p>Antes de iniciar a função principal do app (função responsável pela criação do site – sites, softwares e afins são interpretados como app), criamos um <strong>mockup</strong> com barra lateral e abas. Esse mockup será utilizado para organizar e exibir as informações do banco de dados.</p>
+<hr />
+<h4 id="criacao-de-abas">Criação de Abas</h4>
+<p>Comandos como:  </p>
+<pre><code class="language-python">aba1, aba2, aba3 = st.tabs([&quot;📊 Report&quot;, &quot;🔍 Pesquisa&quot;, &quot;📚 Ensino&quot;])
+with aba1:
+with aba2:
+with aba3:
+</code></pre>
+<p>São responsáveis por criar abas.</p>
+<h3 id="criacao-de-barras-laterais">Criação de Barras laterais</h3>
+<p>Comandos como:</p>
+<pre><code class="language-python">St.sidebar.header(':blue[OCEAN_REPORT]', divider='blue')
+</code></pre>
+<p>São responsáveis por criar barras laterais para agregar informações como as de filtro.</p>
+<h3 id="criacao-de-caixa-de-texto">Criação de caixa de texto</h3>
+<p>Comandos como:</p>
+<pre><code class="language-python">st.sidebar.selectbox( 'Selecione o Dataset', ('Dados Observacionai'))
+</code></pre>
+<p>São responsáveis por criar caixas de filtros que vão representar a natureza do banco de dados.</p>
+<h3 id="escrita-de-texto">Escrita de Texto</h3>
+<p>Comandos como:</p>
+<pre><code class="language-python">st.write(texto, unsafe_allow_html=True)
+</code></pre>
+<p>São responsáveis pela escrita de texto.</p>
+<p>Esses elementos são essenciais para a estruturação inicial do app, permitindo maior organização e interatividade com os dados apresentados.</p>
+<p>Em outro contexto, poderíamos escrever dentro do app qualquer outra informação que desejamos repassar para os usuários, exemplo: Número de paradas operacionais, quantidade de tempo de navios atrasados, inventario de descarbonização etc. No final do desenvolvimento, o programador deve ter uma pasta contendo o ambiente virtual, um script contendo todas as linhas de código da sua aplicação e um banco de dados minimante adaptado para representar a realidade da informação que se deseja repassar para o usuário final.</p>
+<p>Para saber mais sobre as aplicabilidades do Streamlit consulte a documentação: https://docs.streamlit.io/ . O esquema abaixo representa de forma sintetizada as etapas necessárias para iniciar o desenvolvimento de sua aplicação web com streamlit. </p>
+<p><img alt="" src="../images/road-streamlit.png" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
